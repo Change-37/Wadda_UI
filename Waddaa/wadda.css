@@ -95,7 +95,7 @@ input:focus{
 	border: solid 1px var(	--border-ivory-color );
 	background: #FBF8E8;
 }
-.password-wrap{
+.input-box-wrap{
 	margin-top: 13px;
 	border: solid 1px var(	--border-ivory-color );
 	background: #FBF8E8;
@@ -113,7 +113,7 @@ input:focus{
 .login-button-wrap {
 	padding-top: 13px;
 }
-.login-button-wrap button{
+.login-button-wrap input{
 	width: 465px;
 	height :48px;
 	font-size: 18px;
