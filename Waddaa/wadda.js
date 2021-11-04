@@ -1,7 +1,6 @@
 var user = {
     name: "",
     id: "",
-    mail: "",
     password: ""
 };
 
@@ -16,10 +15,6 @@ function checkInput() {
     {
         window.alert("아이디를 입력해주세요.");
         JoinIn.id.focus();
-    }
-    else if(!document.joinIn.mail.value) 
-    {
-        window.alert("이메일을 입력해주세요.");
     }
     else if(!document.joinIn.password.value) 
     {
@@ -37,19 +32,16 @@ function checkInput() {
     {
         user.name = document.querySelector('#name');
         user.id = document.querySelector('#id');
-        user.mail = document.querySelector('#email');
         user.password = document.querySelector('#password');
         console.log("name =", user.name);
         console.log("id =", user.id);
-        console.log("mail =", user.mail);
         console.log("password =", user.password);
 
         $.ajax({
-            url: './checkLogin.php',
+            url: './msq.php',
             data: {
                 userName: user.name,
                 userId: user.id,
-                userMail: user.mail,
                 userPw: user.password
             },
             type: "POST",

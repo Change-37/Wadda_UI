@@ -13,8 +13,8 @@
 	padding:0;
 	
 }
-
 ul{list-style:none;}
+
 /* 스크롤바 설정*/
 ::-webkit-scrollbar{
     width: 6px;
@@ -38,10 +38,12 @@ body{
 .main-container{
 	list-style:none;
 	width:100%;
+	max-width: 700px;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
 	margin-top: 21px;
+	margin: 0 auto;
 }
 .main-container .main-wrap{
 	width:768px;
@@ -89,12 +91,20 @@ body{
 input:focus{
 	outline:#FBF8E8;
 }
+
+.left-text{
+	align-items: left;
+}
+.right-text{
+	align-items: right;
+}
 .login-input-wrap{
 	width: 465px;
 	height :48px;
 	border-radius: 10px;
 	border: solid 1px var(	--border-ivory-color );
 	background: #FBF8E8;
+	margin-top: 5px;
 }
 .input-box-wrap{
 	margin-top: 13px;
@@ -310,7 +320,7 @@ footer .copyright-wrap span{
 	flex-direction: column;
 	align-items: center;
 }
-.question-button-wrap button{
+.question-button-wrap ul li{
 	width: 200px;
 	height: 50px;
 	margin: 18px;
@@ -320,6 +330,8 @@ footer .copyright-wrap span{
     border-radius: 10px;  
 	border: solid 3px var(--wadda-white-border-color);
 }
+
+.question-button-wrap 
 .question-large-button-wrap button{
 	width: 400px;
 	height: 50px;
@@ -332,35 +344,165 @@ footer .copyright-wrap span{
 }
 
 .main-section{
-	width:1920px;
+	width:100%;
 	height:auto;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
 	margin-top: 21px;
 }
-.weather-section .story-section{
-	max-width:960px; 
+.weather-section{
 	width:100%; 
-	height:800px; 
-	border:1px solid #cccccc; 
-	margin:0 auto;
+	max-width: 960px;
+	height:200px; 
+	margin-top:20px;
 }
-.weather-img ul .story-img ul{
+.story-section{
+	width:100%; 
+	max-width: 960px;
+	height:200px; 
+	margin-top:20px;
+}
+.story-terms_box ul{
 	white-space: nowrap; 
     overflow-x: auto; 
-	text-align: center
-
+	text-align: center;
 }
-.weather-img ul li .story-img ul li{
+.weather-terms_box ul {
+	white-space: nowrap; 
+    overflow-x: auto; 
+	text-align: center;
+}
+.weather-terms_box ul li{
 	display:inline-block; 
-	padding: 10px 20px; 
-	background: #ccc; 
+	padding: 10px 10px;  
 	margin-right:10px;
+	margin-top: 5px;
 }
-.slide-show img{
-	width: auto;
+.story-terms_box ul li{
+	display:inline-block; 
+	padding: 10px 10px; 
+	margin-right:10px;
+	margin-top: 5px;
+}
+.weather-terms_box ul li a img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: relative;
+}
+.story-terms_box ul li a img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+}
+.weather-terms_box{
+    position: relative;
+    overflow: auto;
+	margin: auto;
+	width: 100%;
+    height: 200px;
+    padding: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;  
+    -webkit-overflow-scrolling: touch;
+}
+.story-terms_box{
+    position: relative;
+    overflow: auto;
+	margin: auto;
+	width: 100%;
+    height: 200px;
+    padding: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;  
+    -webkit-overflow-scrolling: touch;
+}
+#slide-show{
+    position: relative;
+	width: 100%;
+	height: 40%;
+}
+  
+.image{
+	position: relative;
+}
+.image .image-text {
+	font-size: 24px;
+	color: #fff;
+	position:absolute;
+	bottom:10px;
+	left:5px;
+	width: 50%;
 	height: auto;
 }
+.tour-sight-image {
+	position: relative;
+	width: 100%;
+}
 
-
+.image-section{
+	width:100%;
+	height:20%;
+	display:flex;
+	flex-direction:column;
+}
+.info-section{
+	width:96%;
+	height: auto;
+	display:flex;
+	flex-direction:column;
+	margin-top: 21px;
+	float: left;
+	margin-top: 5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-size: 18px;
+}
+.info-section img{
+	width: 28px;
+	height: 28px;
+	margin-right: 3%;
+	float: left;
+}
+.info-image-section{
+	width: 96%;
+	height: auto;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 5%;
+}
+#sAddress {
+	width: 100%;
+	height: 10%;
+	margin-top: 3%;
+}
+#sNumber {
+	width: 100%;
+	height: 10%;
+	margin-top: 3%;
+}
+#sOpen {
+	width: 100%;
+	height: 10%;
+	margin-top: 3%;
+}
+#sTime {
+	width: 100%;
+	height: 10%;
+	margin-top: 3%;
+}
+#sInfo {
+	width: 100%;
+	height: 20%;
+	margin-top: 3%;
+}
+#sMainImg{
+	align-items: center; 
+	width: 100%; 
+	height: 10%; 
+	max-height: 300px;
+}
