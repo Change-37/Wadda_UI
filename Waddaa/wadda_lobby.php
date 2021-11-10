@@ -2,10 +2,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>왔다 아이가</title>
-	<link rel="stylesheet" href="wadda.css">
+	<link rel="stylesheet" href="waddalobby.css">
 	<script src="main.js"></script>
     <style>
-        h2{ align-items: left; width: 100%; margin-top: 5%;}
+        p{ align-items: left; width: 100%; margin-top: 5%; text-size: 24px; }
         img{ align-items: center; width: 100%; height: 10%; max-height: 300px;}
     </style>
 </head>
@@ -15,7 +15,7 @@
 <script>
 
 $.ajax({ 
-    url:"https://wadda1.cafe24.com/tk/load_td.php?detail=1", 
+    url:"https://wadda1.cafe24.com/tk/load_td.php", // 여기에 관광지 DB 링크
     type:"POST", 
     success: function(result) { 
 
@@ -24,10 +24,29 @@ $.ajax({
 		result = JSON.parse(result);
 	
 		for(i=0;i<result.length;i++){
-			html2 += '<li><a href="https://wadda1.cafe24.com/tk/wadda_gwangwang.php?detail=' + result[i].seq + '"><img src="' + result[i].pic1 + '" alt="스토리1"></a></li>';
+			
+			html2 += '<li><a href="https://wadda1.cafe24.com/wadda_gwangwang.php?detail=' + result[i].seq + '"><img src="' + result[i].pic1 + '" alt="스토리"></a></li>';
 		}
-
 		$("#liclass").html(html2);
+		
+
+        
+    } 
+});
+$.ajax({ 
+    url:"https://wadda1.cafe24.com/tk/load_td.php", // 여기에 메인화면 슬라이더 넣은 이미지 DB 링크 
+    type:"POST", 
+    success: function(result) { 
+
+		
+		html2 = "";
+		result = JSON.parse(result);
+
+		for(i=0;i<result.length;i++){
+			
+			html2 += '<div class="image"><img src="' + result[i].pic + '" alt="스토리"></a><div class="image-text"><h2>'+result[i].text+'</h2></div></div>';
+		}
+		$("#slide-show").html(html2);
 		
 
         
@@ -37,23 +56,21 @@ $.ajax({
 </script>
 
 <body>
+<header>
+	<div class="header-container">
+		<h2><a href="#">와따 아이가!</a></h2>
+	</div>
+</header>
     <div class="main-container">
-        <header>
-
-        </header>
         <div class="main-section">
             <div id="slide-show">
                 <div class="image">
-                    <img src="./mainImg1.jpg" alt="메인 슬라이드쇼">
-                    <div class="image-text">
-                        <h2>가을하늘에 은하수</h2>
-                    </div>
                 </div>
                 
             </div>
         </div>
 
-        <h2>주변 관광지</h2>
+        <p><b>주변 관광지</b></p>
         <section class="story-section">
                 <div class="story-terms_box" tabindex="0" id="divService">
                     <ul id = "liclass" class="aaa">
@@ -72,7 +89,7 @@ $.ajax({
             </span>
         </section>
 
-        <h2>날씨</h2>
+        <p><b>오늘의 날씨</b></p>
         <section class="weather-section">
                 <div class="weather-terms_box" tabindex="1" id="divService">
                     <ul>
@@ -88,5 +105,6 @@ $.ajax({
                 </div>
         </section>
     </div>
-
+    
+	<script src="wadda_slide-show"></script>
 </body>
