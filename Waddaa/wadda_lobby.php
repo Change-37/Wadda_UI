@@ -56,21 +56,22 @@ $.ajax({
 </script>
 
 <body>
-<header>
-	<div class="header-container">
-		<h2><a href="#">와따 아이가!</a></h2>
-	</div>
-</header>
     <div class="main-container">
+        <header>
+
+        </header>
         <div class="main-section">
             <div id="slide-show">
-                <div class="image">
-                </div>
+                <div class="image"><img src="./mainImg1.jpg"></div>
+                <div class="image"><img src="./mainImg2.jpg"></div>
+                <div class="image"><img src="./mainImg3.jpg"></div>
+                <div class="image"><img src="./mainImg4.jpg"></div>
+                <div class="image"><img src="./mainImg5.jpg"></div>
                 
             </div>
         </div>
 
-        <p><b>주변 관광지</b></p>
+        <h2>주변 관광지</h2>
         <section class="story-section">
                 <div class="story-terms_box" tabindex="0" id="divService">
                     <ul id = "liclass" class="aaa">
@@ -89,7 +90,7 @@ $.ajax({
             </span>
         </section>
 
-        <p><b>오늘의 날씨</b></p>
+        <h2>날씨</h2>
         <section class="weather-section">
                 <div class="weather-terms_box" tabindex="1" id="divService">
                     <ul>
@@ -105,6 +106,6 @@ $.ajax({
                 </div>
         </section>
     </div>
-    
-	<script src="wadda_slide-show"></script>
+
+	<script src="wadda_slide-show.js"></script>
 </body>
